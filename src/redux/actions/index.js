@@ -1,5 +1,5 @@
 // Coloque aqui suas actions
-import fetchAPI from '../services';
+import fetchAPI from '../services/index';
 
 const USER_EMAIL = 'USER_EMAIL';
 const emailValue = (payload) => ({
