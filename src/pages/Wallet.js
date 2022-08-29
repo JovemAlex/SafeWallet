@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import WalletForm from '../components/WalletForm';
 
 export default class Wallet extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class Wallet extends Component {
       <div>
         Wallet
         <Header />
+        <WalletForm />
       </div>
     );
   }
