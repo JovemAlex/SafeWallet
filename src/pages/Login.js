@@ -19,7 +19,6 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { email } = this.state;
-    // console.log(email);
     const { dispatch, history } = this.props;
     dispatch(emailValue(email));
     history.push('/carteira');
@@ -46,10 +45,9 @@ class Login extends Component {
 
   render() {
     const { email, password, buttonDisabled } = this.state;
-    // const SIX = 6;
-    // const validateEmail = /^[^ ]+@[^ ]+.[a-z]{2,3}$/.test(email);
     return (
-      <div>
+      <fieldset>
+        <h1>TrybeWallet💰</h1>
         <form>
           <input
             type="email"
@@ -76,7 +74,7 @@ class Login extends Component {
             Entrar
           </button>
         </form>
-      </div>
+      </fieldset>
     );
   }
 }
