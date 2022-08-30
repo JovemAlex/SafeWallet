@@ -79,6 +79,7 @@ function WalletForm() {
           <option value="Saúde">Saúde</option>
         </select>
       </label>
+      <button type="submit">Adicionar despesa</button>
     </form>
   );
 }
