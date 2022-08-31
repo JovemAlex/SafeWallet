@@ -30,15 +30,8 @@ class WalletForm extends Component {
 
     const { dispatch } = this.props;
     const { id } = this.state;
-
     const response = await fetchAPI();
-    // console.log(exchangeRates);
-
     this.setState({ exchangeRates: response });
-
-    // const { exchangeRates } = this.state;
-    // console.log(exchangeRates);
-
     dispatch(addExpenses(this.state));
 
     this.setState({
@@ -57,7 +50,7 @@ class WalletForm extends Component {
       tag,
       description,
     } = this.state;
-    // console.log(currencies);
+
     return (
       <>
         {/* valor da despesa */}

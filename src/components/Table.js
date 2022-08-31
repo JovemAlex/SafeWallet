@@ -5,8 +5,6 @@ import { removeExpense } from '../redux/actions';
 
 class Table extends Component {
   handleClick = ({ target }) => {
-    // console.log('clicou');
-    // console.log(target);
     const { expenses, dispatch } = this.props;
     const expense = expenses.filter(({ id }) => id !== Number(target.id));
     dispatch(removeExpense(expense));

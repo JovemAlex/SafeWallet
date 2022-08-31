@@ -6,13 +6,9 @@ class Header extends Component {
   render() {
     const { email, expenses } = this.props;
     const exchangeRatesValue = expenses.reduce((acc, curr) => {
-      // console.log(exchangeRatesValue);
       const currency = curr.exchangeRates[curr.currency];
-      // console.log(currency);
       const rate = currency.ask * curr.value;
-      // console.log(rate);
       const rates = Number((rate).toFixed(2));
-      // console.log(rates);
       return Number(acc) + rates;
     }, '0.00');
 
