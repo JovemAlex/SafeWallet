@@ -24,6 +24,12 @@ const fetchCurrenciesFalse = (error) => ({
   error,
 });
 
+const ADD_EXPENSES = 'ADD_EXPENSES';
+const addExpenses = (expenses) => ({
+  type: ADD_EXPENSES,
+  expenses,
+});
+
 const getCurrenciesData = () => async (dispatch) => {
   dispatch(fetchCurrencies);
   try {
@@ -39,8 +45,10 @@ const getCurrenciesData = () => async (dispatch) => {
 export {
   emailValue,
   getCurrenciesData,
+  addExpenses,
   USER_EMAIL,
   FETCH_CURRENCIES,
   FETCH_CURRENCIES_TRUE,
   FETCH_CURRENCIES_FALSE,
+  ADD_EXPENSES,
 };

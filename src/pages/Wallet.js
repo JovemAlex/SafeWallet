@@ -7,7 +7,6 @@ export default class Wallet extends Component {
   render() {
     return (
       <div>
-        Wallet
         <Header />
         <WalletForm />
         <Table />
