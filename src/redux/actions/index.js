@@ -30,6 +30,12 @@ const addExpenses = (expenses) => ({
   expenses,
 });
 
+const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
+const removeExpense = (expenses) => ({
+  type: REMOVE_EXPENSE,
+  expenses,
+});
+
 const getCurrenciesData = () => async (dispatch) => {
   dispatch(fetchCurrencies);
   try {
@@ -46,9 +52,11 @@ export {
   emailValue,
   getCurrenciesData,
   addExpenses,
+  removeExpense,
   USER_EMAIL,
   FETCH_CURRENCIES,
   FETCH_CURRENCIES_TRUE,
   FETCH_CURRENCIES_FALSE,
   ADD_EXPENSES,
+  REMOVE_EXPENSE,
 };

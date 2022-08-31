@@ -3,6 +3,7 @@ import {
   FETCH_CURRENCIES_FALSE,
   FETCH_CURRENCIES_TRUE,
   ADD_EXPENSES,
+  REMOVE_EXPENSE,
 } from '../actions';
 
 const INITIAL_STATE = {
@@ -33,6 +34,11 @@ const wallet = (state = INITIAL_STATE, { type, payload, error, expenses }) => {
     return {
       ...state,
       expenses: [...state.expenses, expenses],
+    };
+  case REMOVE_EXPENSE:
+    return {
+      ...state,
+      expenses: [...expenses],
     };
   default:
     return state;

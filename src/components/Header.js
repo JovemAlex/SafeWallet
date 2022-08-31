@@ -13,8 +13,9 @@ class Header extends Component {
       // console.log(rate);
       const rates = Number((rate).toFixed(2));
       // console.log(rates);
-      return acc + rates;
-    }, 0);
+      return Number(acc) + rates;
+    }, '0.00');
+
     return (
       <div>
         Email:
