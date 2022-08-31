@@ -49,22 +49,31 @@ class Login extends Component {
       <fieldset>
         <h1>TrybeWallet💰</h1>
         <form>
-          <input
-            type="email"
-            data-testid="email-input"
-            onChange={ this.handleChange }
-            value={ email }
-            name="email"
-            required
-          />
-          <input
-            type="password"
-            data-testid="password-input"
-            onChange={ this.handleChange }
-            value={ password }
-            name="password"
-            required
-          />
+          <label htmlFor="email">
+            Email:
+            <input
+              type="email"
+              data-testid="email-input"
+              id="email"
+              onChange={ this.handleChange }
+              value={ email }
+              name="email"
+              required
+            />
+          </label>
+          {' '}
+          <label htmlFor="password">
+            Password:
+            <input
+              type="password"
+              data-testid="password-input"
+              id="password"
+              onChange={ this.handleChange }
+              value={ password }
+              name="password"
+              required
+            />
+          </label>
           <button
             type="submit"
             onChange={ this.handleChange }

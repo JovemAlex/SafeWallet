@@ -118,6 +118,7 @@ class WalletForm extends Component {
 
         {/* categoria */}
         <label htmlFor="tag">
+          categoria:
           <select
             name="tag"
             id="tag"
