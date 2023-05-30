@@ -6,7 +6,21 @@ import Table from '../components/Table';
 export default class Wallet extends Component {
   render() {
     return (
-      <div>
+      <div
+        className="
+      bg-gradient-to-r
+      from-cyan-500
+      to-blue-500
+      h-screen
+      text-white
+      flex
+      flex-col
+      justify-center
+      items-center
+      w-1200
+      max-w-1200
+      "
+      >
         <Header />
         <WalletForm />
         <Table />

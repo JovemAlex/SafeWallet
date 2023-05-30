@@ -13,17 +13,27 @@ class Header extends Component {
     }, '0.00');
 
     return (
-      <div>
-        Email:
-        <h3 data-testid="email-field">{ email }</h3>
-        Despesa Total:
+      <div className="bg-red-600 flex w-11/12 flex-col">
+        <div
+          data-testid="email-field"
+          className="bg-green-600 flex "
+        >
+          <p className="mr-2">Email:</p>
+          <h3 className="font-bold">{ email.toUpperCase() }</h3>
+        </div>
         <h3
           data-testid="total-field"
+          className="bg-blue-600"
         >
+          Despesa Total: R$
           { exchangeRatesValue }
         </h3>
-        Câmbio:
-        <h3 data-testid="header-currency-field">BRL</h3>
+        <h3
+          data-testid="header-currency-field"
+          className="bg-yellow-600"
+        >
+          Câmbio: BRL
+        </h3>
       </div>
     );
   }

@@ -46,11 +46,21 @@ class Login extends Component {
   render() {
     const { email, password, buttonDisabled } = this.state;
     return (
-      <fieldset>
-        <h1>TrybeWallet💰</h1>
-        <form>
+      <div
+        className="
+        bg-gradient-to-r
+        from-cyan-500
+        to-blue-500
+        h-screen
+        flex
+        justify-center
+        items-center
+        flex-col
+        "
+      >
+        <h1 className="text-9xl font-bold text-white">SelfWallet</h1>
+        <form className="flex flex-col">
           <label htmlFor="email">
-            Email:
             <input
               type="email"
               data-testid="email-input"
@@ -59,11 +69,19 @@ class Login extends Component {
               value={ email }
               name="email"
               required
+              placeholder="Email"
+              className="
+              p-3
+              border
+              rounded-lg
+              font-medium
+              mt-3
+              mb-5
+              "
             />
           </label>
           {' '}
           <label htmlFor="password">
-            Password:
             <input
               type="password"
               data-testid="password-input"
@@ -72,6 +90,14 @@ class Login extends Component {
               value={ password }
               name="password"
               required
+              placeholder="Password"
+              className="
+              p-3
+              border
+              rounded-lg
+              font-medium
+              mb-5
+              "
             />
           </label>
           <button
@@ -79,11 +105,27 @@ class Login extends Component {
             onChange={ this.handleChange }
             disabled={ buttonDisabled }
             onClick={ this.handleSubmit }
+            className="
+            p-3
+            bg-transparent
+            border
+            rounded-lg
+            text-emerald-100
+            mb-5
+            transition duration-700 ease-in-out
+            disabled:bg-slate-50/50
+            disabled:text-white-500/50
+            disabled:border-slate-200/50
+            disabled:shadow-none
+            enabled:bg-green-500
+            enabled:text-white-500
+            enabled:border-green-400
+            "
           >
             Entrar
           </button>
         </form>
-      </fieldset>
+      </div>
     );
   }
 }
