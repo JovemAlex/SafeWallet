@@ -13,27 +13,34 @@ class Header extends Component {
     }, '0.00');
 
     return (
-      <div className="bg-red-600 flex w-11/12 flex-col">
-        <div
-          data-testid="email-field"
-          className="bg-green-600 flex "
-        >
-          <p className="mr-2">Email:</p>
-          <h3 className="font-bold">{ email.toUpperCase() }</h3>
+      <div className="flex w-11/12 flex-col justify-center items-center">
+        <h1 className="text-7xl mb-10 font-bold">SafeWallet🔒</h1>
+        <div className="flex w-11/12 flex justify-between text-xl">
+          <div
+            data-testid="email-field"
+            className="flex bg-transparent border p-2 rounded-xl"
+          >
+            <p className="mr-2">Email:</p>
+            <h3 className="font-bold">{ email.toUpperCase() }</h3>
+          </div>
+          <div
+            data-testid="total-field"
+            className="flex bg-transparent border p-2 rounded-xl"
+          >
+            <p className="mr-2">Despesa Total:</p>
+            <h3 className="font-bold">
+              R$
+              { exchangeRatesValue }
+            </h3>
+          </div>
+          <div
+            data-testid="header-currency-field"
+            className="flex bg-transparent border p-2 rounded-xl"
+          >
+            <p className="mr-2">Câmbio:</p>
+            <h3 className="font-bold">BRL</h3>
+          </div>
         </div>
-        <h3
-          data-testid="total-field"
-          className="bg-blue-600"
-        >
-          Despesa Total: R$
-          { exchangeRatesValue }
-        </h3>
-        <h3
-          data-testid="header-currency-field"
-          className="bg-yellow-600"
-        >
-          Câmbio: BRL
-        </h3>
       </div>
     );
   }

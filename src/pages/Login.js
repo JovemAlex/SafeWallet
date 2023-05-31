@@ -58,7 +58,7 @@ class Login extends Component {
         flex-col
         "
       >
-        <h1 className="text-9xl font-bold text-white">SelfWallet</h1>
+        <h1 className="text-9xl font-bold text-white">SelfWallet🔒</h1>
         <form className="flex flex-col">
           <label htmlFor="email">
             <input

@@ -15,7 +15,6 @@ export default class Wallet extends Component {
       text-white
       flex
       flex-col
-      justify-center
       items-center
       w-1200
       max-w-1200
